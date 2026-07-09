@@ -1,71 +1,256 @@
-# 🛒 Auction E-Commerce System
+# 🛒 Auction Management System
 
-This project is an **auction-based e-commerce system** that allows users to **sign up, sign in, browse items, and participate in auctions**.
-It supports both **Forward Auctions** and **Dutch Auctions**, enabling real-time bidding and transactions.
-
-The system is fully connected to a **Neon PostgreSQL database**, handling all user authentication, item listings, bidding, and payment processes.
+A full-stack auction platform built with **Java**, **Spring Boot**, **Spring Security**, **PostgreSQL**, and **REST APIs**. The application enables users to securely register, browse auction listings, participate in both **Forward** and **Dutch Auctions**, place bids, complete purchases, and manage auction activity through a responsive web interface.
 
 ---
 
-## 📌 Features
+# 📖 Overview
 
-✅ **User Authentication** (Sign-Up, Sign-In, Forgot Password)  
-✅ **Auction System** (Forward & Dutch Auctions)  
-✅ **Real-time Bidding and Payments**  
-✅ **Neon PostgreSQL Database (Fully Integrated)**  
-✅ **Responsive UI with HTML & CSS**
+This project demonstrates the design and development of a complete auction platform using modern backend architecture, secure authentication, RESTful APIs, and relational database integration.
+
+The system follows a layered Spring Boot architecture and provides secure user authentication, auction management, bidding workflows, payment processing, and persistent data storage.
 
 ---
 
-## 🔧 How to Run the Project
+# 👨‍💻 My Contributions
 
-### 1️⃣ Open the Front-End
+This project was independently designed and developed from scratch.
 
-You can access the **Sign-Up** and **Auction System** pages locally:
+My responsibilities included:
 
-- **Sign-Up & Sign-In:** Open `signup.html` in your browser.
-- **Auction System:** Open `auction.html` in your browser.
-
-### 2️⃣ Backend Setup
-
-- Navigate to the **backend directory**:
-  ```bash
-  cd backend
-  ```
-- Start the Java EE / Spring Boot server:
-  ```bash
-  mvn spring-boot:run
-  ```
-
-### 3️⃣ Database Connection
-
-## The project uses **Neon PostgreSQL**, and the connection is already set up
-
-## 🌍 How to Access the Project Online
-
-If deployed, you can access it via the following links:
-
-🔹 **Sign-Up & Sign-In Page:** http://localhost:8080/signup.html?
-🔹 **Auction System Page:** http://localhost:8080/auction.html?
+- Designing the complete application architecture
+- Building the Spring Boot backend
+- Developing REST APIs for users, auctions, bidding, and payments
+- Implementing Spring Security authentication and authorization
+- Designing and implementing the PostgreSQL database schema
+- Building both Forward Auction and Dutch Auction workflows
+- Implementing bid validation and payment processing logic
+- Developing the frontend using HTML, CSS, and JavaScript
+- Connecting the frontend with backend REST APIs
+- Configuring Maven dependencies and project structure
+- Testing application functionality and debugging integration issues
 
 ---
 
-## 📜 Use Cases Covered
+# ✨ Features
 
-✔️ **UC1:** Sign-Up & Sign-In  
-✔️ **UC2:** Browse Auction Items  
-✔️ **UC3:** Place Bids in Forward & Dutch Auctions  
-✔️ **UC4:** Auction Completion & Payment  
-✔️ **UC5:** Payment & Receipts  
-✔️ **UC6:** Shipment Tracking  
-✔️ **UC7:** Sellers Can List New Items  
-✔️ **UC8:** Price Adjustments in Dutch Auctions
+## 🔐 Authentication
+
+- User registration
+- Secure login
+- Password authentication
+- Spring Security authorization
+- Session management
 
 ---
 
-## 🛠️ Technologies Used
+## 🛍 Auction Management
 
-🔹 **Frontend:** HTML, CSS, JavaScript  
-🔹 **Backend:** Java EE / Spring Boot  
-🔹 **Database:** Neon PostgreSQL  
-🔹 **API Communication:** RESTful APIs
+- Create auction listings
+- Browse auction items
+- Search available auctions
+- Seller item management
+- Auction status tracking
+
+---
+
+## 💰 Bidding System
+
+### Forward Auctions
+
+- Place competitive bids
+- Automatic highest bid tracking
+- Bid validation
+- Winner determination
+
+### Dutch Auctions
+
+- Dynamic price reduction
+- Purchase at current auction price
+- Automatic auction completion
+
+---
+
+## 💳 Payment Processing
+
+- Purchase workflow
+- Transaction handling
+- Payment confirmation
+- Order completion
+
+---
+
+## 🗄 Database
+
+- PostgreSQL integration
+- User account storage
+- Auction records
+- Bid history
+- Payment records
+- Persistent application data
+
+---
+
+# 🛠 Tech Stack
+
+## Backend
+
+- Java
+- Spring Boot
+- Spring Security
+- Spring Data JPA
+- Maven
+
+## Database
+
+- PostgreSQL
+
+## Frontend
+
+- HTML
+- CSS
+- JavaScript
+
+## APIs
+
+- REST APIs
+
+---
+
+# 🏗 Architecture
+
+```text
+                 Browser
+                     │
+                     ▼
+          HTML • CSS • JavaScript
+                     │
+             REST API Requests
+                     │
+                     ▼
+            Spring Boot Backend
+      ├── Authentication
+      ├── User Management
+      ├── Auctions
+      ├── Bidding
+      ├── Payments
+      └── Search
+                     │
+                     ▼
+                PostgreSQL
+```
+
+---
+
+# 📂 Project Structure
+
+```text
+src/
+├── controller/
+├── service/
+├── repository/
+├── entity/
+├── security/
+├── config/
+├── resources/
+└── application/
+
+pom.xml
+README.md
+```
+
+---
+
+# 🚀 Getting Started
+
+## Prerequisites
+
+- Java 17+
+- Maven
+- PostgreSQL
+
+---
+
+## Clone the Repository
+
+```bash
+git clone https://github.com/FardadRa/Auction-Management-System.git
+cd Auction-Management-System
+```
+
+---
+
+## Install Dependencies
+
+```bash
+mvn clean install
+```
+
+---
+
+## Configure the Database
+
+Update the PostgreSQL connection settings inside:
+
+```text
+src/main/resources/application.properties
+```
+
+---
+
+## Run the Application
+
+```bash
+mvn spring-boot:run
+```
+
+The application will start locally on:
+
+```
+http://localhost:8080
+```
+
+---
+
+# 📋 Skills Demonstrated
+
+- Java Backend Development
+- Spring Boot
+- Spring Security
+- REST API Development
+- Object-Oriented Programming
+- PostgreSQL Database Design
+- Spring Data JPA
+- Authentication & Authorization
+- MVC Architecture
+- Backend–Frontend Integration
+- Full-Stack Development
+- Software Architecture
+- Database Modeling
+- Maven Build Management
+- Debugging & Testing
+
+---
+
+# 🔮 Future Improvements
+
+- JWT authentication
+- Docker deployment
+- Admin dashboard
+- Image upload support
+- Email notifications
+- Live bidding using WebSockets
+- Payment gateway integration
+- Auction analytics dashboard
+
+---
+
+# 📦 Release
+
+**Current Version:** **v1.0.0**
+
+---
+
+# 📄 License
+
+This project was developed for educational and portfolio purposes.
